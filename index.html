@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⬇️ Flappy Bird - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .download-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .bird-icon {
+            font-size: 80px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .game-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .game-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .game-info .icon {
+            font-size: 18px;
+            width: 25px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00b894, #00a87a);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.3);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 184, 148, 0.5);
+            background: linear-gradient(135deg, #00d2a0, #00b894);
+        }
+        
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .download-btn .size {
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 12px 8px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .feature .emoji {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .footer {
+            margin-top: 25px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .compatibility {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        @media (max-width: 500px) {
+            .download-card {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+            .download-btn {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-card">
+        <span class="bird-icon">🐦</span>
+        <h1>Flappy Bird</h1>
+        <p class="subtitle">Classic arcade game for Windows</p>
+        
+        <div class="compatibility">🪟 Windows 7 / 8 / 10 / 11</div>
+        
+        <div class="game-info">
+            <p><span class="icon">🎮</span> Simple one-click gameplay</p>
+            <p><span class="icon">📊</span> High score tracking</p>
+            <p><span class="icon">🪟</span> No installation required</p>
+            <p><span class="icon">⚡</span> Lightweight & fast</p>
+        </div>
+        
+        <a href="FlappyBird.exe" download class="download-btn" id="downloadBtn">
+            ⬇️ Download Now
+            <span class="size">~6.3 MIB</span>
+        </a>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="emoji">🕹️</span>
+                Addictive Gameplay
+            </div>
+            <div class="feature">
+                <span class="emoji">🏆</span>
+                High Scores
+            </div>
+            <div class="feature">
+                <span class="emoji">🖱️</span>
+                Click or Space
+            </div>
+        </div>
+        
+        <div class="footer">
+            Made with ❤️ • Free to play
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            // Track download (optional)
+            console.log('📥 FlappyBird.exe download started');
+            
+            // Simulate delay to show feedback
+            this.textContent = '⬇️ Downloading...';
+            this.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                this.textContent = '⬇️ Download Now  ~120 KB';
+                this.style.opacity = '1';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
